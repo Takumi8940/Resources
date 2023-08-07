@@ -1,0 +1,18 @@
+<h1>詳細表示</h1>
+<div>
+    <p>
+        お名前：<%= @user.nema %>
+    </p>
+    <p>
+        年齢：<%= @user.age %>
+    </p>
+</div>
+<div>
+    <p>
+        <%= link_to "一覧表示へ", users_path %>
+    </p>
+    <p>
+        <%= link_to "編集", edit_user_path(@user.id) %>
+    </p>
+    <%= button_to '削除', user_path(@user.id), method: :delete  %>
+</div>
